@@ -1,0 +1,137 @@
+/* /* body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f6f1eb;
+  color: #a1866f;
+} */
+
+/* صورة الغلاف */
+#hero-section {
+  position: relative;
+  height: 350px;
+  background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c")
+    no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#hero-section h1 {
+  position: relative;
+  color: #fff;
+  font-size: 48px;
+  z-index: 1;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* المستطيلات */
+/* .info-section {
+  padding: 60px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+}
+
+.info-card {
+  background-color: #ded4c6;
+  border-radius: 12px;
+  padding: 20px 30px;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.info-card.offset {
+  margin-left: 80px;
+  margin-top: 40px;
+}
+
+.info-card p {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.book-btn {
+  background-color: #a1866f;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  float: right;
+  transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #8c715c;
+}
+
+/* الصور أسفل الصفحة */
+/* .cards-section {
+  padding: 40px;
+  background-color: #e8ded2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background-color: #ded4c6;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */  
+
+
+.header {
+  position: relative;
+  height: 300px;
+  background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c")
+    no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* شفافية غامقة */
+}
+
+.header h1 {
+  position: relative;
+  color: #ffffff;
+  font-size: 48px;
+  z-index: 1;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "user": "64f1a1b2c3d4e5f678901111",
+    "businessName": "Dream Wedding Hall",
+    "businessType": "hall",
+    "description": "Elegant and spacious wedding hall for all events.",
+    "location": "Cairo, Egypt",
+    "approved": true,
+    "isActive": true
+  },
+  {
+    "user": "64f1a1b2c3d4e5f678901112",
+    "businessName": "Royal Cars",
+    "businessType": "car",
+    "description": "Luxury wedding cars and limousines.",
+    "location": "Giza, Egypt",
+    "approved": true,
+    "isActive": true
+  },
+  {
+    "user": "64f1a1b2c3d4e5f678901113",
+    "businessName": "Floral Touch",
+    "businessType": "flowers",
+    "description": "Beautiful floral decorations and bouquets.",
+    "location": "Alexandria, Egypt",
+    "approved": true,
+    "isActive": false
+  },
+  {
+    "user": "64f1a1b2c3d4e5f678901114",
+    "businessName": "Perfect Shots",
+    "businessType": "photography",
+    "description": "Professional wedding and engagement photography.",
+    "location": "Mansoura, Egypt",
+    "approved": true,
+    "isActive": true
+  },
+  {
+    "user": "64f1a1b2c3d4e5f678901115",
+    "businessName": "Golden Events",
+    "businessType": "hall",
+    "description": "Modern hall with golden lighting and seating.",
+    "location": "Nasr City, Cairo",
+    "approved": false,
+    "isActive": false
+  },
+  {
+    "user": "64f1a1b2c3d4e5f678901116",
+    "businessName": "Bloom & Petals",
+    "businessType": "flowers",
+    "description": "Fresh flower arrangements for weddings and engagements.",
+    "location": "Heliopolis, Cairo",
+    "approved": true,
+    "isActive": true
+  },
+  {
+    "user": "64f1a1b2c3d4e5f678901117",
+    "businessName": "Elite Cars",
+    "businessType": "car",
+    "description": "Classic and modern wedding cars for rent.",
+    "location": "6th October City",
+    "approved": false,
+    "isActive": false
+  },
+  {
+    "user": "64f1a1b2c3d4e5f678901118",
+    "businessName": "Memory Makers",
+    "businessType": "photography",
+    "description": "Creative wedding videography and drone shots.",
+    "location": "Zamalek, Cairo",
+    "approved": true,
+    "isActive": true
+  },
+  {
+    "user": "64f1a1b2c3d4e5f678901119",
+    "businessName": "Event Lux",
+    "businessType": "hall",
+    "description": "Luxurious event space for weddings and parties.",
+    "location": "Sheikh Zayed, Giza",
+    "approved": true,
+    "isActive": true
+  },
+  {
+    "user": "64f1a1b2c3d4e5f678901120",
+    "businessName": "Blissful Blooms",
+    "businessType": "flowers",
+    "description": "Wedding floral design and custom bouquet services.",
+    "location": "Maadi, Cairo",
+    "approved": true,
+    "isActive": true
+  }
+]

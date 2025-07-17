@@ -1,0 +1,112 @@
+[
+  {
+    "vendor": "64f1a1b2c3d4e5f678901234",
+    "title": "Luxury Wedding Hall",
+    "category": "hall",
+    "description": "A grand hall suitable for luxury weddings.",
+    "price": 20000,
+    "images": ["https://images.unsplash.com/photo-1549187774-b4e9b0445b06"],
+    "videos": ["https://www.youtube.com/watch?v=weddinghall1"],
+    "availableDates": ["2025-08-01T00:00:00.000Z", "2025-08-15T00:00:00.000Z"],
+    "location": "Cairo, Egypt"
+  },
+  {
+    "vendor": "64f1a1b2c3d4e5f678901234",
+    "title": "Classic Car Rental",
+    "category": "car",
+    "description": "Vintage cars for your wedding day.",
+    "price": 5000,
+    "images": ["https://images.unsplash.com/photo-1563720222830-360d3f60d7d3"],
+    "videos": [],
+    "availableDates": ["2025-09-01T00:00:00.000Z", "2025-09-10T00:00:00.000Z"],
+    "location": "Giza, Egypt"
+  },
+  {
+    "vendor": "64f1a1b2c3d4e5f678901234",
+    "title": "Floral Decoration Package",
+    "category": "flowers",
+    "description": "Fresh floral decorations with elegant arrangements.",
+    "price": 3000,
+    "images": ["https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0"],
+    "videos": [],
+    "availableDates": ["2025-07-20T00:00:00.000Z", "2025-08-05T00:00:00.000Z"],
+    "location": "Alexandria, Egypt"
+  },
+  {
+    "vendor": "64f1a1b2c3d4e5f678901234",
+    "title": "Professional Wedding Photography",
+    "category": "photography",
+    "description": "Capture your big day with a professional photographer.",
+    "price": 8000,
+    "images": ["https://images.unsplash.com/photo-1505904267569-30d4b34b0a8e"],
+    "videos": ["https://www.youtube.com/watch?v=photography"],
+    "availableDates": ["2025-07-18T00:00:00.000Z", "2025-08-02T00:00:00.000Z"],
+    "location": "Cairo, Egypt"
+  },
+  {
+    "vendor": "64f1a1b2c3d4e5f678901234",
+    "title": "Outdoor Garden Venue",
+    "category": "hall",
+    "description": "Open air garden for weddings and parties.",
+    "price": 12000,
+    "images": ["https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"],
+    "videos": [],
+    "availableDates": ["2025-09-01T00:00:00.000Z", "2025-09-05T00:00:00.000Z"],
+    "location": "6th October, Egypt"
+  },
+  {
+    "vendor": "64f1a1b2c3d4e5f678901234",
+    "title": "Luxury Limousine Service",
+    "category": "car",
+    "description": "Ride in style on your wedding day.",
+    "price": 7000,
+    "images": ["https://images.unsplash.com/photo-1525609004556-c46c7d6cf023"],
+    "videos": [],
+    "availableDates": ["2025-08-01T00:00:00.000Z", "2025-08-10T00:00:00.000Z"],
+    "location": "Nasr City, Cairo"
+  },
+  {
+    "vendor": "64f1a1b2c3d4e5f678901234",
+    "title": "Drone Wedding Videography",
+    "category": "photography",
+    "description": "High-quality aerial shots of your special day.",
+    "price": 10000,
+    "images": ["https://images.unsplash.com/photo-1526178619443-4a1e13f1b18d"],
+    "videos": ["https://www.youtube.com/watch?v=dronewedding"],
+    "availableDates": ["2025-08-08T00:00:00.000Z", "2025-08-22T00:00:00.000Z"],
+    "location": "Mansoura, Egypt"
+  },
+  {
+    "vendor": "64f1a1b2c3d4e5f678901234",
+    "title": "Modern Wedding Hall",
+    "category": "hall",
+    "description": "Stylish interior with high-end lighting and seating.",
+    "price": 18000,
+    "images": ["https://images.unsplash.com/photo-1560347876-aeef00ee58a1"],
+    "videos": [],
+    "availableDates": ["2025-07-25T00:00:00.000Z", "2025-08-05T00:00:00.000Z"],
+    "location": "Cairo, Egypt"
+  },
+  {
+    "vendor": "64f1a1b2c3d4e5f678901234",
+    "title": "Fresh Rose Bouquet",
+    "category": "flowers",
+    "description": "Customized bridal bouquet of fresh roses.",
+    "price": 1500,
+    "images": ["https://images.unsplash.com/photo-1544005313-94ddf0286df2"],
+    "videos": [],
+    "availableDates": ["2025-07-15T00:00:00.000Z", "2025-07-30T00:00:00.000Z"],
+    "location": "Heliopolis, Cairo"
+  },
+  {
+    "vendor": "64f1a1b2c3d4e5f678901234",
+    "title": "Engagement Photography",
+    "category": "photography",
+    "description": "Romantic photoshoot session for engaged couples.",
+    "price": 6000,
+    "images": ["https://images.unsplash.com/photo-1504198453319-5ce911bafcde"],
+    "videos": [],
+    "availableDates": ["2025-08-01T00:00:00.000Z", "2025-08-15T00:00:00.000Z"],
+    "location": "Zamalek, Cairo"
+  }
+]
