@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -66,7 +66,7 @@ const LoginForm = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
 
       <form
         onSubmit={handleSubmit}
@@ -75,7 +75,6 @@ const LoginForm = () => {
         <h1 className="text-center text-3xl font-semibold text-[#a55c52] mb-10 tracking-wide">
           Login
         </h1>
-
         <label
           className="block text-lg font-medium text-gray-700 mb-2"
           htmlFor="email"
@@ -91,7 +90,6 @@ const LoginForm = () => {
           className="mb-6 w-full h-11 rounded-lg bg-[#f5efe9] px-4 focus:outline-none focus:ring-2 focus:ring-[#a55c52]/50 placeholder-gray-400"
           required
         />
-
         <label
           className="block text-lg font-medium text-gray-700 mb-2"
           htmlFor="password"
@@ -107,13 +105,18 @@ const LoginForm = () => {
           className="mb-6 w-full h-11 rounded-lg bg-[#f5efe9] px-4 focus:outline-none focus:ring-2 focus:ring-[#a55c52]/50 placeholder-gray-400"
           required
         />
-
         <button
           type="submit"
           className="w-40 h-14 bg-[#a5725d] text-white text-xl rounded-2xl mx-auto block transition hover:bg-[#8e5e4d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#a5725d]/70"
         >
           Login
         </button>
+        <div className=" text-[#a5725d]  flex items-center justify-center">
+          <span>Don't have an account? </span>
+          <Link to="/register">
+            <strong> Signup</strong>
+          </Link>
+        </div>
       </form>
     </div>
   );

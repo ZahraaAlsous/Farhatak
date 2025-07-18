@@ -1,13 +1,7 @@
-import { useState } from "react";
-import {
-
-  IoPersonOutline,
-} from "react-icons/io5";
+import { IoPersonOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
-
 export const VendorNavbar = () => {
-  const [showBookings, setShowBookings] = useState(false);
   const navigate = useNavigate(); // ⬅️ استخدمنا التنقل
 
   return (
@@ -59,6 +53,21 @@ export const VendorNavbar = () => {
             onClick={() => navigate("/VendorProfile")}
           >
             <IoPersonOutline size={20} />
+          </div>
+
+          <div className="ml-1">
+            {localStorage.getItem("token") ? (
+              <button
+                onClick={() => {
+                  localStorage.setItem("token", "");
+                  navigate("/login"); // يمكنك إعادة توجيه المستخدم إلى صفحة تسجيل الدخول بعد تسجيل الخروج
+                }}
+              >
+                Logout
+              </button>
+            ) : (
+              <button onClick={() => navigate("/login")}>Login</button>
+            )}
           </div>
         </div>
       </div>

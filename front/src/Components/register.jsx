@@ -12,7 +12,7 @@
 //   // Local component state
 //   // ---------------------------------------
 //   const [formData, setFormData] = useState({
-//     username: "",
+//     name: "",
 //     phone: "",
 //     email: "",
 //     password: "",
@@ -55,14 +55,14 @@
 //         </h1>
 
 //         {/* USER NAME */}
-//         <label className="block text-lg font-medium text-gray-700 mb-2" htmlFor="username">
+//         <label className="block text-lg font-medium text-gray-700 mb-2" htmlFor="name">
 //           User name :
 //         </label>
 //         <input
-//           id="username"
-//           name="username"
+//           id="name"
+//           name="name"
 //           type="text"
-//           value={formData.username}
+//           value={formData.name}
 //           onChange={handleChange}
 //           className="mb-6 w-full h-11 rounded-lg bg-[#f5efe9] px-4 focus:outline-none focus:ring-2 focus:ring-[#a55c52]/50 placeholder-gray-400"
           
@@ -155,7 +155,7 @@
 //   const navigate = useNavigate(); // ⬅️ استخدمنا التنقل
 
 //   const [formData, setFormData] = useState({
-//     username: "",
+//     name: "",
 //     phone: "",
 //     email: "",
 //     password: "",
@@ -186,7 +186,7 @@
 
 //     try {
 //       const payload = {
-//         username: formData.username,
+//         name: formData.name,
 //         email: formData.email,
 //         password: formData.password,
 //         confirmPassword: formData.confirmPassword,
@@ -205,7 +205,7 @@
 
 //       // Reset form
 //       setFormData({
-//         username: "",
+//         name: "",
 //         phone: "",
 //         email: "",
 //         password: "",
@@ -247,15 +247,15 @@
 //         {/* USER NAME */}
 //         <label
 //           className="block text-lg font-medium text-gray-700"
-//           htmlFor="username"
+//           htmlFor="name"
 //         >
 //           User name :
 //         </label>
 //         <input
-//           id="username"
-//           name="username"
+//           id="name"
+//           name="name"
 //           type="text"
-//           value={formData.username}
+//           value={formData.name}
 //           onChange={handleChange}
 //           className="mb-3 w-full h-11 rounded-lg bg-[#f5efe9] px-4 focus:outline-none focus:ring-2 focus:ring-[#a55c52]/50 placeholder-gray-400"
 //           required
@@ -354,7 +354,7 @@
 //   const navigate = useNavigate();
 
 //   const [formData, setFormData] = useState({
-//     username: "",
+//     name: "",
 //     phone: "",
 //     email: "",
 //     password: "",
@@ -376,7 +376,7 @@
 
 //     try {
 //       const payload = {
-//         username: formData.username,
+//         name: formData.name,
 //         email: formData.email,
 //         password: formData.password,
 //         confirmPassword: formData.confirmPassword,
@@ -394,7 +394,7 @@
 //       alert("Registration successful!");
 
 //       setFormData({
-//         username: "",
+//         name: "",
 //         phone: "",
 //         email: "",
 //         password: "",
@@ -432,10 +432,10 @@
 //         </h1>
 
 //         <input
-//           id="username"
-//           name="username"
+//           id="name"
+//           name="name"
 //           type="text"
-//           value={formData.username}
+//           value={formData.name}
 //           onChange={handleChange}
 //           placeholder="User name"
 //           className="mb-3 w-full h-11 rounded-lg bg-[#f5efe9] px-4 focus:outline-none focus:ring-2 focus:ring-[#a55c52]/50 placeholder-gray-400"
@@ -506,7 +506,7 @@ const RegisterForm = () => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    username: "",
+    name: "",
     phone: "",
     email: "",
     password: "",
@@ -528,7 +528,7 @@ const RegisterForm = () => {
 
     try {
       const payload = {
-        username: formData.username,
+        name: formData.name,
         email: formData.email,
         password: formData.password,
         confirmPassword: formData.confirmPassword,
@@ -546,7 +546,7 @@ const RegisterForm = () => {
       alert("Registration successful!");
 
       setFormData({
-        username: "",
+        name: "",
         phone: "",
         email: "",
         password: "",
@@ -585,10 +585,10 @@ const RegisterForm = () => {
         </h1>
 
         <input
-          id="username"
-          name="username"
+          id="name"
+          name="name"
           type="text"
-          value={formData.username}
+          value={formData.name}
           onChange={handleChange}
           placeholder="User name"
           className="mb-3 w-full h-11 rounded-lg bg-[#f5efe9] px-4 focus:outline-none focus:ring-2 focus:ring-[#a55c52]/50 placeholder-gray-400"

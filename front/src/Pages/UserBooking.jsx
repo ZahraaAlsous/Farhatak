@@ -39,8 +39,29 @@ const UserBookings = () => {
   return (
     <>
       <Navbar />
+      <div className="relative w-full h-[500px]">
+        <img
+          src="/10.jpeg"
+          alt="Service Header"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center z-10">
+          {/* <h1 className="text-4xl md:text-5xl font-bold text-white">
+            My bookings
+          </h1> */}
+          {/* <h1 className="text-3xl font-bold mb-6 text-center text-coral-600">
+            Search Packages by Budget and Categories
+          </h1> */}
+
+          <div className=" p-6 shadow-md rounded-xl mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
+              My bookings
+            </h1>
+          </div>
+        </div>
+      </div>
       <div className="p-4 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-bold mb-4">My Bookings</h2>
+        {/* <h2 className="text-2xl font-bold mb-4">My Bookings</h2> */}
 
         {bookings.length === 0 ? (
           <p className="text-gray-500">You do not have Bookings</p>
@@ -63,7 +84,7 @@ const UserBookings = () => {
                   <strong>Location:</strong> {booking.service?.location}
                 </p>
                 <p>
-                  <strong>price:</strong> {booking.service?.price} جنيه
+                  <strong>price:</strong> {booking.service?.price} $
                 </p>
                 <p>
                   <strong>Booking Date:</strong>{" "}

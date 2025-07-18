@@ -255,7 +255,7 @@ try {
 
         {/* Booking Popup */}
         {showPopup && (
-          <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center z-50 bg-black bg-opacity-40">
+          <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center z-50">
             <div className="bg-white rounded-xl shadow-xl p-8 max-w-md w-full text-[#a1866f] relative">
               <h2 className="text-xl mb-4 font-bold">Book Now</h2>
 

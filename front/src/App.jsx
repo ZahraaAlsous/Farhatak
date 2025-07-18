@@ -23,8 +23,7 @@ import Vendors from './Admin/Vendors.jsx'
 import Services from './Admin/services.jsx'
 import LandingPage from './Pages/landingPage.jsx';
 import Packages from './Pages/Packages.jsx';
-// import ChatBot from './Pages/ChatBot .jsx';
-// import ChatBot from './Pages/ChatBot.jsx';
+import AboutUs from './Pages/AboutUs.jsx';
 
 function App() {
   return (
@@ -33,7 +32,6 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginForm />} />
-          {/* <Route path="/register" element={<Register />} /> */}
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/registerv" element={<RegisterFormv />} />
           <Route path="/service" element={<Servic />} />
@@ -51,14 +49,11 @@ function App() {
           <Route path="/adminvendors" element={<Vendors />} />
           <Route path="/adminservices" element={<Services />} />
           <Route path="/Packages" element={<Packages />} />
-
-          {/* <Route path="/bot" element={<ChatBot />} /> */}
+          <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="*" element={<LandingPage />} />
         </Routes>
       </Router>
       <Footer />
-      {/* // <OutgoingCall />
-      // <AudioCallWithCamera /> */}
     </>
   );
 }

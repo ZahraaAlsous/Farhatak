@@ -99,7 +99,6 @@
 // import { IoPersonOutline } from "react-icons/io5";
 // import { Link, useNavigate } from "react-router-dom";
 
-
 // const Navbar = () => (
 //   <nav className="w-full sticky top-0 z-20 bg-white backdrop-blur border-b-4 border-[#7b5d4d]">
 //     <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 text-sm text-[#6C4C3F] font-medium">
@@ -190,19 +189,6 @@
 
 // export default Navbar;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React from "react";
 import { IoPersonOutline } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
@@ -217,12 +203,11 @@ const Navbar = () => {
   //   }
   // };
 
-
   const handleCategorySelect = (e) => {
     const category = e.target.value;
     if (category) {
-      localStorage.setItem("Category", category); // تخزين التصنيف
-      navigate("/service"); // نفس مسار صفحة الخدمة المستخدم في Home
+      localStorage.setItem("Category", category);
+      navigate("/service");
     }
   };
 
@@ -232,13 +217,14 @@ const Navbar = () => {
         <div className="flex items-center">
           <img src="/logo.png" alt="Logo" className="h-25 w-50" />
         </div>
-
         <div className="hidden md:flex flex-1 justify-center gap-x-16 text-lg text-[#6C4C3F]">
-          <a href="#about" className="hover:text-[#8c5e4f] transition">
+          {/* <a href="#about" className="hover:text-[#8c5e4f] transition">
             About
-          </a>
+          </a> */}
+          <Link to="/AboutUs" className="hover:text-[#8c5e4f] transition">
+            AboutUs
+          </Link>
 
-          {/* Services Dropdown */}
           <select
             defaultValue=""
             onChange={handleCategorySelect}
@@ -261,8 +247,6 @@ const Navbar = () => {
           </Link>
           <a className="hover:text-[#8c5e4f] transition">Support</a>
         </div>
-
-        {/* Right: Profile Icon */}
         <div
           className="flex items-center space-x-4 cursor-pointer"
           onClick={() => navigate("/UserProfile")}
@@ -274,6 +258,34 @@ const Navbar = () => {
           >
             <IoPersonOutline size={18} />
           </div>
+        </div>
+
+        {/* <div>
+          {
+            localStorage.getItem("token", "") ?
+             (<button onClick={() => navigate("/login")}>
+                Login
+                </button>)
+            :
+             (<button onClick={() =>localStorage.setItem("token", "")}>
+                Logout
+                </button>)
+            
+          }
+        </div> */}
+        <div className="ml-1">
+          {localStorage.getItem("token") ? (
+            <button
+              onClick={() => {
+                localStorage.setItem("token", "");
+                navigate("/login"); // يمكنك إعادة توجيه المستخدم إلى صفحة تسجيل الدخول بعد تسجيل الخروج
+              }}
+            >
+              Logout
+            </button>
+          ) : (
+            <button onClick={() => navigate("/login")}>Login</button>
+          )}
         </div>
       </div>
     </nav>

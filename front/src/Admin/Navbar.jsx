@@ -1,5 +1,7 @@
 // import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 // const Navbar = () => {
 //   return (
 //     <header className="bg-white shadow px-4 py-3 flex justify-between items-center">
@@ -15,6 +17,8 @@
 // export default Navbar;
 
 const Navbar = () => {
+    const navigate = useNavigate();
+
   const handleProfileClick = () => {
     // Navigate to profile page or open modal
     alert("Go to Profile");
@@ -22,6 +26,10 @@ const Navbar = () => {
 
   const handleLogoutClick = () => {
     // Handle logout logic
+  
+                  localStorage.setItem("token", "");
+                  navigate("/login");
+ 
     alert("Logging out...");
   };
 
