@@ -28,9 +28,12 @@ ChartJS.register(
 const labels = ["Jan", "Feb", "Mar", "Apr", "May"];
 
 export const BarChart = ({ topServices }) => {
-  // Defensive: if no data, show empty arrays
-  const labels = topServices?.map(service => service.category);
-  const counts = topServices?.map(service => service.bookingCount);
+  const labels = topServices?.map(service => service.serviceId || "Unknown");
+  const counts = topServices?.map(service => service.bookingCount || 0);
+
+  if (!topServices || topServices.length === 0) {
+    return <p>No services data available for chart</p>;
+  }
 
   return (
     <Bar
@@ -40,7 +43,7 @@ export const BarChart = ({ topServices }) => {
           {
             label: "Booking Count",
             data: counts,
-            backgroundColor: "rgba(59, 130, 246, 0.6)", // Tailwind blue-500
+            backgroundColor: "rgba(59, 130, 246, 0.6)",
           },
         ],
       }}
@@ -48,6 +51,7 @@ export const BarChart = ({ topServices }) => {
     />
   );
 };
+
 export const LineChart = () => (
   <Line
     data={{
@@ -65,21 +69,35 @@ export const LineChart = () => (
   />
 );
 
-export const PieChart = () => {
+export const PieChart = ({ servicesCount }) => {
+  if (!servicesCount || servicesCount.length === 0) {
+    return <p>Loading chart...</p>;
+  }
+
+  const labels = servicesCount.map((service) => service.title);
+  const dataValues = servicesCount.map((service) => service.count);
+
   const data = {
-    labels: ["Red", "Blue", "Yellow"],
+    labels,
     datasets: [
       {
-        label: "Votes",
-        data: [12, 19, 3],
+        label: 'Services by Title',
+        data: dataValues,
         backgroundColor: [
-          "rgba(239, 68, 68, 0.7)",
-          "rgba(59, 130, 246, 0.7)",
-          "rgba(234, 179, 8, 0.7)",
+          '#60a5fa', // blue
+          '#f87171', // red
+          '#fbbf24', // yellow
+          '#34d399', // green
+          '#c084fc', // purple
+          '#f472b6', // pink
+          '#facc15', // amber
+          '#38bdf8', // sky
         ],
+        borderWidth: 1,
       },
     ],
   };
+
 
   const options = {
     responsive: true,

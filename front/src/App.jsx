@@ -44,10 +44,10 @@ function App() {
           <Route path="/AddListingPage" element={<AddListingPage />} />
           <Route path="/BookingsPage" element={<BookingsPage />} />
           <Route path="/VendorProfile" element={<VendorProfile />} />
-          <Route path="/admindashboard" element={<Dashboard />} />
-          <Route path="/adminusers" element={<Users />} />
-          <Route path="/adminvendors" element={<Vendors />} />
-          <Route path="/adminservices" element={<Services />} />
+          <Route path="/admin-dashboard" element={<Dashboard />} />
+          <Route path="/admin-usersData" element={<Users />} />
+          <Route path="/admin-vendorsData" element={<Vendors />} />
+          <Route path="/admin-servicesData" element={<Services />} />
           <Route path="/Packages" element={<Packages />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="*" element={<LandingPage />} />

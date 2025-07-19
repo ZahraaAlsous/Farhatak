@@ -496,3 +496,89 @@ export const searchServices = async (req, res) => {
       .json({ message: "Server error.", success: false, field: "Server" });
   }
 };
+
+
+//Count All Services (For The Admin)
+
+export const countServices = async (req, res) => {
+  try {
+    const serviceCount = await Service.countDocuments({});
+
+    res.status(200).json({ serviceCount });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: "Server error" });
+  }
+};
+
+export const getServiceTitleCounts = async (req, res) => {
+  try {
+    const counts = await Service.aggregate([
+      {
+        $group: {
+          _id: "$title",
+          count: { $sum: 1 },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          title: "$_id",
+          count: 1,
+        },
+      },
+    ]);
+
+    res.status(200).json(counts);
+  } catch (error) {
+    res.status(500).json({ message: 'Error retrieving service counts', error });
+  }
+};
+
+
+export const getServicesOverTime = async (req, res) => {
+  try {
+    const data = await Service.aggregate([
+      {
+        $match: {
+          createdAt: { $type: "date" } // ensure createdAt is a valid Date
+        }
+      },
+      {
+        $group: {
+          _id: {
+            year: { $year: "$createdAt" },
+            month: { $month: "$createdAt" },
+          },
+          count: { $sum: 1 },
+        },
+      },
+      {
+        $sort: { "_id.year": 1, "_id.month": 1 },
+      },
+      {
+        $project: {
+          _id: 0,
+          date: {
+            $dateToString: {
+              format: "%Y-%m",
+              date: {
+                $dateFromParts: {
+                  year: "$_id.year",
+                  month: "$_id.month",
+                  day: 1,
+                }
+              }
+            }
+          },
+          count: 1,
+        },
+      },
+    ]);
+
+    res.status(200).json({ success: true, data });
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).json({ success: false, message: "Failed to fetch data." });
+  }
+};

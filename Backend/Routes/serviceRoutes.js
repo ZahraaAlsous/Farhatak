@@ -1,5 +1,6 @@
 import express from "express";
 import {
+  countServices,
   createService,
   deleteService,
   deleteServiceForAdmin,
@@ -8,6 +9,8 @@ import {
   getServiceById,
   getServiceByTitle,
   getServiceDetailsById,
+  getServicesOverTime,
+  getServiceTitleCounts,
   getVendorServices,
   searchServices,
   updateService,
@@ -40,6 +43,7 @@ const upload = multer({ storage });
 
 const serviceRouter = express.Router();
 
+serviceRouter.get("/getServicesOverTime", getServicesOverTime);
 serviceRouter.get("/service", getServiceById);
 serviceRouter.get("/service/category/:category", getServiceBycategory);
 serviceRouter.get("/vendor/services", protect, getVendorServices);
@@ -55,7 +59,7 @@ serviceRouter.post(
   ]),
   createService
 );
-
+serviceRouter.get('/title-counts',protect,isAdmin, getServiceTitleCounts);
 serviceRouter.patch("/updateService/:serviceId", protect, updateService);
 serviceRouter.delete("/deleteService/:serviceId", protect, deleteService);
 serviceRouter.get("/getAllServices",protect, getAllServices);
@@ -65,7 +69,7 @@ serviceRouter.delete(
   deleteServiceForAdmin
 );
 serviceRouter.get("/search", searchServices);
-
+serviceRouter.get("/countServices",protect,isAdmin, countServices);
 
 // serviceRouter.get("/service/:serviceId/reviews", getReviewsByServiceId);
 

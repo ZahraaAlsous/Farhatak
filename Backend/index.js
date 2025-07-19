@@ -7,8 +7,8 @@ import authRoutes from "./Routes/authRoutes.js";
 import serviceRouter from "./Routes/serviceRoutes.js";
 import reviewRouter from "./Routes/reviewRoutes.js";
 import bookingRouter from "./Routes/bookingRoutes.js";
-import vendorsRouter from "./Routes/vendorsRoutes.js";
 import packageRoute from "./Routes/packageRoute.js";
+import vendorsRouter from "./Routes/vendorsRoutes.js";
 
 dotenv.config();
 const app = express();

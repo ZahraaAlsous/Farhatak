@@ -323,7 +323,7 @@ const result = await Booking.aggregate([
 };
 
 // Top Services by Booking Volume
-export const getTopServicesByBookingVolume = async (req, res) => {
+export const getTopServicesByBooking = async (req, res) => {
   try {
     const result = await Booking.aggregate([
       {

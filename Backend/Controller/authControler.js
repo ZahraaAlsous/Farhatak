@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import User from "../Models/UserModel.js";
+import Vendor from "../Models/vendorModel.js";
 
 const generateToken = (userId) => {
   return jwt.sign({ id: userId }, process.env.JWT_SECRET, {
@@ -111,10 +112,6 @@ export const getProfile = async (req, res) => {
 };
   
 
-
-
-
-import Vendor from "../Models/vendorModel.js";
 
 export const signupVendor = async (req, res) => {
   try {

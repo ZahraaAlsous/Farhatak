@@ -154,3 +154,16 @@ export const updatePassword = async (req, res) => {
     res.status(500).send(`the error is ${error}`);
   }
 };
+
+//Count All Users (For The Admin)
+
+export const countUsers = async (req, res) => {
+  try {
+    const usersCount = await User.countDocuments({ role: "user" });
+
+    res.status(200).json({ usersCount });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: "Server error" });
+  }
+};

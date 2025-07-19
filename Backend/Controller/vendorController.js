@@ -183,3 +183,17 @@ export const deleteVendor = async (req, res) => {
     res.status(500).send(`Error deleting vendor: ${error}`);
   }
 };
+
+
+//Count All Vendors (For The Admin)
+
+export const countVendors = async (req, res) => {
+  try {
+    const vendorsCount = await Vendor.countDocuments({});
+
+    res.status(200).json({ vendorsCount });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: "Server error" });
+  }
+};

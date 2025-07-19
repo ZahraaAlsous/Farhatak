@@ -10,7 +10,7 @@ import {
   getAllVendorBookings,
   getBookingStatusCounts,
   getServicesAndDates,
-  getTopServicesByBookingVolume,
+  getTopServicesByBooking,
 } from "../Controller/bookingController.js";
 import isAdmin from "../Middleware/isAdminMiddleware.js";
 
@@ -30,8 +30,8 @@ bookingRouter.put("/booking/:id/complete", protect, completeBooking);
 bookingRouter.get("/getServicesAndDates", protect,isAdmin, getServicesAndDates);
 bookingRouter.get("/getBookingStatusCounts",protect,isAdmin, getBookingStatusCounts);
 bookingRouter.get(
-  "/getTopServicesByBookingVolume",
-  getTopServicesByBookingVolume
+  "/getTopServicesByBooking",
+  getTopServicesByBooking
 );
 
 export default bookingRouter;

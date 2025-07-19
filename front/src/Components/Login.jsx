@@ -38,7 +38,7 @@ const LoginForm = () => {
         if (data.user.role === "vendor") {
           navigate("/Vservice");
         } else if (data.user.role === "admin") {
-          navigate("/admindashboard");
+          navigate("/admin-dashboard");
         } else {
           navigate("/Home");
         }
